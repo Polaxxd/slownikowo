@@ -48,7 +48,6 @@
     </style>
 </head>
 <body>
-    <!-- Button 'Od nowa' in the top-left corner -->
     <a href="{{ url_for('home') }}" class="btn btn-default ml-3 mt-1 btn-sm od-now-btn">Od nowa</a>
 
     <div class="container mt-5 center-content" id="centered_div">
@@ -61,7 +60,7 @@
                 <style>
                 body {
                         background-image: url("{{ url_for('static', filename='confetti_background.png') }}");
-                        background-size: cover; 
+                        background-size: cover;
                         background-position: center;
                     }
                 </style>
@@ -73,14 +72,12 @@
                 </style>
                 {% endif %}
 
-            <!-- Loop for pre_words -->
             {% for i, a, b in pre_words %}
                 <span style="color: green; font-size: {{ 24 - i }}px;">{{ a }}</span><span style="color: red; font-size: {{ 24 - i }}px;">{{ b }}</span><br>
             {% endfor %}
 
             <h2 style="color: green; font-size: 26px">{{ right_word }}</h2>
 
-            <!-- Loop for post_words -->
             {% for i, a, b in post_words %}
                 <span style="color: green; font-size: {{ 24 - i }}px;">{{ a }}</span><span style="color: red; font-size: {{ 24 - i }}px;">{{ b }}</span><br>
             {% endfor %}
