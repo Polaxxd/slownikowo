@@ -57,6 +57,22 @@
         {% if t == "ZWYCIĘSTWO!" or t == "Ileż można... Tu jest odpowiedź:" %}
             <form method="POST" action="{{ url_for('word_input') }}">
 
+            {% if t == "ZWYCIĘSTWO!" %}
+                <style>
+                body {
+                        background-image: url("{{ url_for('static', filename='confetti_background.png') }}");
+                        background-size: cover; 
+                        background-position: center;
+                    }
+                </style>
+                {% else %}
+                <style>
+                    body {
+                        background-color: white;
+                    }
+                </style>
+                {% endif %}
+
             <!-- Loop for pre_words -->
             {% for i, a, b in pre_words %}
                 <span style="color: green; font-size: {{ 24 - i }}px;">{{ a }}</span><span style="color: red; font-size: {{ 24 - i }}px;">{{ b }}</span><br>
@@ -69,7 +85,7 @@
                 <span style="color: green; font-size: {{ 24 - i }}px;">{{ a }}</span><span style="color: red; font-size: {{ 24 - i }}px;">{{ b }}</span><br>
             {% endfor %}
 
-            <a href="{{ url_for('game_start') }}" class="btn btn-success ml-3 mt-1">Nowa gra</a>
+            <a href="{{ url_for("game_start", tryb= 'domyslny') }}" class="btn btn-success ml-3 mt-1">Nowa gra</a>
 
             </form>
 

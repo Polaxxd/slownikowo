@@ -12,14 +12,13 @@
 <body>
     <H1>Strona startowa</H1>
     <div class="col-md-3 m-4">
-        <a href="{{ url_for("game_start") }}" class="btn btn-success ml-3 mt-1">Rozpocznij nową grę - łatwa</a>
-        <a href="{{ url_for("game_start") }}" class="btn btn-success ml-3 mt-1">Rozpocznij nową grę - trudna</a>
-        <a href="{{ url_for("game_start") }}" class="btn btn-success ml-3 mt-1">Rozpocznij nową grę - zwierzęta</a>
-        <a href="{{ url_for("game_start") }}" class="btn btn-success ml-3 mt-1">Rozpocznij nową grę - święta</a>
+        <a href="{{ url_for("game_start", tryb = 'latwy') }}" class="btn btn-success ml-3 mt-1">Rozpocznij nową grę - łatwa</a>
+        <a href="{{ url_for("game_start", tryb = 'trudny') }}" class="btn btn-success ml-3 mt-1">Rozpocznij nową grę - trudna</a>
+        <a href="{{ url_for("game_start", tryb = 'ekstremalny') }}" class="btn btn-success ml-3 mt-1">Rozpocznij nową grę - ekstremalna</a>
+        <a href="{{ url_for("game_start", tryb = 'zwierzeta') }}" class="btn btn-success ml-3 mt-1">Rozpocznij nową grę - zwierzęta</a>
+        <a href="{{ url_for("game_start", tryb = 'swieta') }}" class="btn btn-success ml-3 mt-1">Rozpocznij nową grę - święta</a>
 
     </div>
-
-
 
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
